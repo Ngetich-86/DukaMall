@@ -1,0 +1,56 @@
+.registrationPage {
+    height: auto;
+    /* background-image: url(../../assets/images/cloud.jpg); */
+  }
+  .registrationTitle{
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    /* margin-bottom: 20px; */
+    text-align: center;
+  }
+  
+  .myForm {
+    width: 74%;
+    
+  }
+  
+  .myFormLogin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color:rgb(1, 20, 20);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 45%;
+    height:auto;
+
+  }
+  
+  .inputFieldLogin {
+    width: 50%;
+    height: 27px;
+    margin: 10px 0;
+    padding: 0 10px;
+    background-color: rgb(84, 85, 87);
+    border: 1px solid #6b06f0;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .submitbtn{
+    width: 30%;
+    height: 30px;
+    margin: 10px 0;
+    padding: 0 10px;
+    border-radius: 5px;
+    outline: none;
+    background-color:rgb(0, 0, 0);
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+  }

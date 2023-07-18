@@ -1,0 +1,38 @@
+/** @format */
+.cart {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 128px;
+  width: 1000px;
+  /* border: 2px solid rgb(105, 250, 8); */
+}
+.cart .card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cart .card img {
+  width: 60px;
+  height: 60px;
+}
+.cart .card p {
+  width: 200px;
+}
+.cart .card .quantity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cart .card .quantity p {
+  width: 50px;
+  text-align: center;
+}
+.cart .card .quantity button {
+  width: 50px;
+}
+.cart .total {
+  text-align: right;
+  border-top: 3px solid rgb(3, 1, 15);
+  gap:2rem;
+}

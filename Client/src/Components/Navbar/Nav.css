@@ -1,0 +1,20 @@
+
+.navbar{
+    width: 100vw;
+    height:40px; 
+    gap: 3.9em;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    display: flex;
+    place-items: center;
+    font-size: 20px;
+    font-weight: 700;
+
+} 
+
+.navbar #menu{
+    text-decoration: none;
+    color: rgb(236, 232, 231);
+    align-items: center;
+}

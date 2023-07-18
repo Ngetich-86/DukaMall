@@ -1,0 +1,33 @@
+table {
+    
+    width: 850px;
+    height: 40px;
+    border-collapse: collapse;
+  }
+  thead{
+    /* background-color: #71c225; */
+    color: aliceblue;
+   
+
+  }
+  /* tr{
+    /* background-color: #250101; */
+    /* border-bottom: 1px solid #ddd; */
+  /* } */ 
+  td {
+    color:rgb(8, 6, 6);
+    padding: 10px;
+    /* text-align: center; */
+    border-left: 4px solid #f77b07;
+    border-right: 4px solid #f77b07;
+    border-bottom: 4px solid #e68404;
+    border-top: 4px solid #f77b07;
+    /* gap:5rem; */
+    
+  }
+
+  th {
+    /* gap:5rem; */
+    background-color: #1d1c1c;
+    margin-left: 60px;
+  }

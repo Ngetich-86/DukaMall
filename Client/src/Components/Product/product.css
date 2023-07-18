@@ -1,0 +1,29 @@
+.product-page{
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    /* height: 130vh; */
+    padding: 0 20px;
+    background-color: #0c0c0c;
+    border: 2px solid whitesmoke;
+    gap:2rem;
+}
+.prod-details{
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+}
+.prod-details button{
+    justify-content: space-between;
+    background-color: rgb(139, 5, 192);
+}
+input{
+    width: 200px;
+    height: 20px;
+    color: #fff;
+    background-color: #664f04;
+    /* border: 2px solid #19db39; */
+}
