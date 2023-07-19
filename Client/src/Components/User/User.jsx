@@ -1,6 +1,6 @@
 import React from 'react'
 import './User.css'
-import image from '../../assets/images/msbag.jpg'
+import image from '../../assets/images/avatar.png'
 const User = () => {
   return (
 
@@ -11,12 +11,12 @@ const User = () => {
 
         <div className="user-info">
         <h2>My Profile</h2>
-        <h4>Email:</h4>
-        <h4>Username:</h4>
-        <h4>Phone Number:</h4>
-        <h4>Postal Code:</h4>
-        <h4>City:</h4>
-        <h4>Address:</h4>
+        <h4>Email:del@gmail.com</h4>
+        <h4>Username:Del</h4>
+        <h4>Phone Number: 0742252810</h4>
+        <h4>Postal Code:20300</h4>
+        <h4>City: Konza</h4>
+        <h4>Address:123-233-230 Nco</h4>
         <button>Update Info</button>
         </div>
         </div>

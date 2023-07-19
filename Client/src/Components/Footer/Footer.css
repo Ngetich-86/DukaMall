@@ -1,6 +1,6 @@
 .footer{
     background-color:rgb(12, 11, 11);
-    width:218vh;
+    /* width:218vh; */
     height: 40vh;
     display:flex;
     gap: 5rem;

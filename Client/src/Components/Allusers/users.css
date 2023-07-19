@@ -18,10 +18,10 @@ table {
     color:rgb(8, 6, 6);
     padding: 10px;
     /* text-align: center; */
-    border-left: 4px solid #f77b07;
-    border-right: 4px solid #f77b07;
-    border-bottom: 4px solid #e68404;
-    border-top: 4px solid #f77b07;
+    border-left: 2px solid #f7f3ef;
+    border-right: 2px solid #f0edea;
+    border-bottom: 2px solid #fdfaf6;
+    border-top: 2px solid #f7f4f2;
     /* gap:5rem; */
     
   }

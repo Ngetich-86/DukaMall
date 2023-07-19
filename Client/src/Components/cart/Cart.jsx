@@ -2,10 +2,13 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { Cartcontext } from "../../Context/Context";
 import "./Cart.css";
+// import {useSelector, useDispatch} from 'react-redux'
 import { IoMdTrash } from "react-icons/io";
 import EmpCart from "../emptyCart/EmpCart";
+import CheckOut from "../Checkout";
 
 const Cart = () => {
+  // const cart = useSelector((state)=>state.cart);
   const Globalstate = useContext(Cartcontext);
   const state = Globalstate.state;
   const dispatch = Globalstate.dispatch;
@@ -58,6 +61,7 @@ const Cart = () => {
        <a href="/"><button type="submit" className='btn-shop'>⬅️Continue Shopping</button></a>
          </Link> 
          <h2>${total}</h2>
+         {/* <CheckOut cartItems={cart.cartItems}/> */}
           <button>Checkout🤑 : ${total}</button>
       </div>
        

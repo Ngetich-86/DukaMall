@@ -1,6 +1,5 @@
 .product-page{
     display: flex;
-    /* flex-direction: column; */
     align-items: center;
     justify-content: center;
     margin: 0 auto;
@@ -8,7 +7,7 @@
     /* height: 130vh; */
     padding: 0 20px;
     background-color: #0c0c0c;
-    border: 2px solid whitesmoke;
+    /* border: 2px solid whitesmoke; */
     gap:2rem;
 }
 .prod-details{
@@ -18,12 +17,12 @@
 }
 .prod-details button{
     justify-content: space-between;
-    background-color: rgb(139, 5, 192);
+    background-color: rgb(167, 9, 219);
 }
 input{
     width: 200px;
     height: 20px;
     color: #fff;
-    background-color: #664f04;
+    background-color: #2b2a27;
     /* border: 2px solid #19db39; */
 }

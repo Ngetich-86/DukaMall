@@ -1,7 +1,7 @@
 
 .navbar{
     width: 100vw;
-    height:40px; 
+    height:60px; 
     gap: 3.9em;
     justify-content: center;
     align-items: center;
@@ -10,11 +10,21 @@
     place-items: center;
     font-size: 20px;
     font-weight: 700;
+    position: sticky;
 
 } 
+.logo{
+    font-size: 14px;
+    font-weight: 700;
+    color: rgb(192, 67, 18);
+    margin-left: 0px;
+    /* text-align: center; */
+   
+}
 
 .navbar #menu{
     text-decoration: none;
     color: rgb(236, 232, 231);
     align-items: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
