@@ -5,7 +5,7 @@ import "./Cart.css";
 // import {useSelector, useDispatch} from 'react-redux'
 import { IoMdTrash } from "react-icons/io";
 import EmpCart from "../emptyCart/EmpCart";
-import CheckOut from "../Checkout";
+import Checkout from '../Checkout'
 
 const Cart = () => {
   // const cart = useSelector((state)=>state.cart);
@@ -61,6 +61,7 @@ const Cart = () => {
        <a href="/"><button type="submit" className='btn-shop'>⬅️Continue Shopping</button></a>
          </Link> 
          <h2>${total}</h2>
+         {/* <Checkout cartItems = {cart.cartItems}/> */}
          {/* <CheckOut cartItems={cart.cartItems}/> */}
           <button>Checkout🤑 : ${total}</button>
       </div>

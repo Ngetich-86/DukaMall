@@ -45,7 +45,7 @@ function Register() {
 
   return (
     <div className="registrationPage">
-      <h2 className="registrationTitle">Sign UP Now🤔</h2>
+      <h2 className="registrationTitle">Sign UP Now😲</h2>
 
       <form onSubmit={handleSubmit(onSubmit)} className="myFormLogin">
         <>

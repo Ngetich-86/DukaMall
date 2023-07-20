@@ -4,9 +4,9 @@ import './Analytics.css';
 
 const Analytics = () => {
   const data = [
-    { name: 'Page A', uv: 400, pv: 2400, amt: 2400 },
-    { name: 'Page B', uv: 800, pv: 1200, amt: 1200 },
-    { name: 'Page C', uv: 1200, pv: 800, amt: 800 },
+    { name: 'Jan -April', uv: 400, pv: 2400, amt: 2400 },
+    { name: 'may-Aug', uv: 800, pv: 1200, amt: 1200 },
+    { name: 'Sep -dec', uv: 1200, pv: 800, amt: 800 },
     // Add more data points here
   ];
 

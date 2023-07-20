@@ -3,10 +3,12 @@ table {
     width: 850px;
     height: 40px;
     border-collapse: collapse;
+    background-color: rgb(49, 37, 37);
+    margin-left:-10px;
   }
   thead{
     /* background-color: #71c225; */
-    color: aliceblue;
+    color: rgb(24, 100, 167);
    
 
   }
@@ -15,13 +17,13 @@ table {
     /* border-bottom: 1px solid #ddd; */
   /* } */ 
   td {
-    color:rgb(8, 6, 6);
+    color:rgb(247, 243, 243);
     padding: 10px;
     /* text-align: center; */
-    border-left: 2px solid #f7f3ef;
-    border-right: 2px solid #f0edea;
-    border-bottom: 2px solid #fdfaf6;
-    border-top: 2px solid #f7f4f2;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
     /* gap:5rem; */
     
   }
@@ -29,5 +31,5 @@ table {
   th {
     /* gap:5rem; */
     background-color: #1d1c1c;
-    margin-left: 60px;
+    /* margin-left: 60px; */
   }

@@ -24,7 +24,7 @@ const Mainnav = () => {
         ) : ui === 'view' ?(
 
         <div className="view-users">
-          <h3>view all users</h3>
+          <h3>Track shipping and payment</h3>
           <Users />
         </div>
         ) : null

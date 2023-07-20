@@ -4,6 +4,7 @@ import post from "./routes/routes.js";
 import bodyParser from "body-parser";
 import jwt from "jsonwebtoken";
 import cors from "cors"
+// import { routes } from './src/routes/allRoutes.js';
 
 const app = express();
 //middleware

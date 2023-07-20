@@ -9,7 +9,13 @@ import User from './Components/User/User'
 import Admin from './Components/Admin/Admin'
 import Services from './Components/Services/Ads'
 import './App.css'
+import Logout from './Components/Logout/Logout'
+import { Context } from './Context/useContent/Context'
+import { useContext } from 'react'
+import CheckoutSuccess from './Components/CheckoutSuccess'
+
 const App = () => {
+  const {user} = useContext(Context);
   return (
     <BrowserRouter>
   <Nav />
@@ -18,9 +24,12 @@ const App = () => {
       <Route path="/Login" element={<Login/>} />
       <Route path="/Signup" element={<Signup/>} />
       <Route path="/Cart" element={<Cart/>} />
+      <Route path="/CheckoutSuccess" element={<CheckoutSuccess/>} />
       <Route path="/User" element={<User/>} />
       <Route path="/Admin" element={<Admin/>} />
       <Route path="/Ads" element={<Services/>} />
+      <Route path="/Logout" element={<Logout/>} />
+      
     </Routes>
     <Footer/>
   </BrowserRouter>

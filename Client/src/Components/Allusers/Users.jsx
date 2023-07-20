@@ -44,10 +44,11 @@ const handleDelete = async (id) => {
       <th>Full Name</th>
       <th>Username</th>
       <th>Email</th>
-      <th>Phone Number</th> 
+      <th>Tel Number</th> 
       <th>postal code</th>
       <th>city</th>
-      <th>Status(delivery)</th>
+      <th>Status(Payment)</th>
+      <th>Delivered</th>
       <th>Action</th>
     </tr>
   </thead>
@@ -61,6 +62,7 @@ const handleDelete = async (id) => {
     <td>{user.phoneNumber}</td>
     <td>{user.postalCode}</td>
     <td>{user.city}</td>
+    <td>PENDING</td>
     <td>PENDING</td>
 
 

@@ -39,7 +39,7 @@ const Login = () => {
     <div className="loginPage">
       <h3 className="loginTitle">LOG-IN</h3>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="myFormLogin">
+      <form onSubmit={handleSubmit(onSubmit)} className="myFormLogin"></form>
         <>
           <input type="email" placeholder="Your email" {...register("email")} className="inputFieldLogin"/>
           <p>{errors.email?.message}</p>
@@ -50,7 +50,7 @@ const Login = () => {
           <p>{errors.password?.message}</p>
         </>
         <input type="submit" value="LOG IN" className="submitbtn" />
-      </form>
+      
     </div>
   
     
