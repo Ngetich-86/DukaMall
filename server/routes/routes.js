@@ -6,14 +6,15 @@ import {
   import {adminLogin} from "../Controllers/adminController.js";
   import {registerAdmin} from "../Controllers/adminController.js"
   import { getData } from "../Controllers/userData.js";
-  import {stripeCheckout, webhookHandler} from "../Controllers/stripeControler.js"
+  // import {stripeCheckout, webhookHandler} from "../Controllers/stripeControler.js"
   import {addProduct} from "../Controllers/productController.js"
   import {getProducts} from "../Controllers/productController.js"
   import {deleteProduct} from "../Controllers/productController.js"
   import express from 'express';
+  
 
   
-  const user = (app) => {
+  const routes = (app) => {
     //register route
     app.route("/auth/register").post(registerUser);
     //login route
@@ -27,8 +28,8 @@ import {
     app.route("/users").get(getData);
 
     //stripe route
-    app.route('/create-checkout-session').post(stripeCheckout)
-    app.route('/webhook').post( express.raw({ type: 'application/json' }), webhookHandler)
+    // app.route('/create-checkout-session').post(stripeCheckout)
+    // app.route('/webhook').post( express.raw({ type: 'application/json' }), webhookHandler)
 
     //add product
     app.route('/addProduct').post(addProduct)
@@ -43,5 +44,5 @@ import {
   
   
   };
-  export default user;
+  export default routes;
   

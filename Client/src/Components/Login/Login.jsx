@@ -32,24 +32,25 @@ const Login = () => {
       })
     .catch(({response}) => {
        console.log(response.data.error); });
-      //  alert('Login Failed'); 
+       alert('Login Failed'); 
     }
 
   return (
-    <div className="loginPage">
-      <h3 className="loginTitle">LOG-IN</h3>
+    <div className="loginPage2">
+      <h3 className="loginTitle2">LOG-IN</h3>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="myFormLogin"></form>
+      <form onSubmit={handleSubmit(onSubmit)} className="myFormLogin2">
         <>
-          <input type="email" placeholder="Your email" {...register("email")} className="inputFieldLogin"/>
+          <input type="email" placeholder="Your email" {...register("email")} className="inputFieldLogin2"/>
           <p>{errors.email?.message}</p>
         </>
         <>
-          <input className="inputFieldLogin" type="password" placeholder="Your password"{...register("password")}
+          <input className="inputFieldLogin2" type="password" placeholder="Your password"{...register("password")}
           />
           <p>{errors.password?.message}</p>
         </>
         <input type="submit" value="LOG IN" className="submitbtn" />
+        </form>
       
     </div>
   

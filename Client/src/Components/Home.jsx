@@ -3,18 +3,18 @@ import { useContext, useEffect, useState } from "react";
 import "./Home.css";
 import axios from "axios";
 import { Cartcontext } from "../Context/Context";
-import data from "./data.js";
+// import data from "./data.js";
 
 const Home = () => {
-  // const [data, setdata] = useState([]);
-  // const fetchData = async () => {
-  //   const response = await axios.get("https://fakestoreapi.com/products");
-  //   setdata(response.data);
-  //   console.log(data);
-  // };
-  // useEffect(() => {
-  //   fetchData();
-  // }, []);
+  const [data, setdata] = useState([]);
+  const fetchData = async () => {
+    const response = await axios.get("https://fakestoreapi.com/products");
+    setdata(response.data);
+    console.log(data);
+  };
+  useEffect(() => {
+    fetchData();
+  }, []);
   const Globalstate = useContext(Cartcontext);
   const dispatch = Globalstate.dispatch;
   console.log(Globalstate);

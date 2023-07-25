@@ -4,22 +4,23 @@ import config from "../db/config.js";
 
 
 export const addProduct = async (req, res) => {
-    const { title,price,category, description, image} = req.body;
 
     try{
+
+        const { title,price,category, description, image} = req.body;
         let pool = await sql.connect(config.sql)
 
         //insert the product into the database
-        const result = await pool.request()
-            .input('title', sql.VarChar, title)
-            .input('category', sql.Int, category)
-            .input('description', sql.VarChar, description)
-            .input('price', sql.VarChar, price)
-            .input('image', sql.VarChar, image)
+     await pool.request()
+            .input("title", sql.VarChar, title)
+            .input("category", sql.VarChar, category)
+            .input("description", sql.VarChar, description)
+            .input("price", sql.Int, price)
+            .input("image", sql.VarChar, image)
             // .output('errorMessage', sql.VarChar(100))
             
-            .query('insert into products (title, category, description, price, image) values (@title,@description, @price, @image,@category)');
-            result.output.errorMessage ? res.status(400).json({ message: result.output.errorMessage }) :
+            .query('insert into products (title, price, category, description, image) values (@title, @price, @category,@description, @image)');
+            // result.output.errorMessage ? res.status(400).json({ message: result.output.errorMessage }) :
             res.status(200).json({ message: 'product added successfully' });
     } catch (error) {
         res.status(201).json({ error: error.message });

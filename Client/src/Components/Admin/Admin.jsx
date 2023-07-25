@@ -29,7 +29,7 @@ const Admin = () => {
     axios.post("http://localhost:8080/auth/admin", data)
     .then(({data}) => {
       if(data.token){
-        // dispatch({type:"Login Success",payload:data});
+        dispatch({type:"Login Success",payload:data});
       alert('Login Successful🎆🎊 ');
        navigate('/Ads');
       }
@@ -40,10 +40,10 @@ const Admin = () => {
     }
 
   return (
-    <div className="loginPage">
+    <div className="adminPage">
       <h1 className="admin_title">Admin</h1>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="myFormLogin">
+      <form onSubmit={handleSubmit(onSubmit)} className="myFormAdmin">
         <>
           <input type="email" placeholder="Your email" {...register("email")} className="inputFieldLogin"/>
           <p>{errors.email?.message}</p>

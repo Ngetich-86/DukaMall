@@ -5,13 +5,19 @@ import bodyParser from "body-parser";
 import jwt from "jsonwebtoken";
 import cors from "cors"
 // import { routes } from './src/routes/allRoutes.js';
+// import { stripeCheckout } from "./Controllers/stripeControler.js";
 
 const app = express();
 //middleware
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+// middleware to allow form data
+app.use(bodyParser.urlencoded({ extended: true }));
+
 app.use(bodyParser.json());
+// app.use(stripeCheckout)
+
 //jwt middleware
 app.use((req, res, next) => {
   if (

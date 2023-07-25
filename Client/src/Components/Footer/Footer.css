@@ -4,6 +4,7 @@
     height: 40vh;
     display:flex;
     gap: 5rem;
+    margin-bottom: 0;
     text-decoration: none;
 }
 .resources{

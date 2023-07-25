@@ -10,7 +10,7 @@ export const registerAdmin = async (req, res) => {
   const hashedPassword = bcrypt.hashSync(password, 10);
   console.log(email, hashedPassword);
   try {
-    //if user already exists
+    //if already exists
     let pool = await sql.connect(config.sql);
     let result = await pool
       .request()
@@ -36,6 +36,43 @@ export const registerAdmin = async (req, res) => {
     sql.close();
   }
 };
+// export const registerAdmin = async (req, res) => {
+//     const { email, password } = req.body;
+//     try {
+//       // Generate a new salt
+//       const salt = bcrypt.genSaltSync(10);
+  
+//       // Hash the password with the generated salt
+//       const hashedPassword = bcrypt.hashSync(password, salt);
+  
+//       console.log(email, hashedPassword);
+  
+//       // The rest of your code remains the same
+//       let pool = await sql.connect(config.sql);
+//       let result = await pool
+//         .request()
+//         .input("email", sql.VarChar, email)
+//         .query("SELECT * FROM Admin WHERE email = @email");
+  
+//       const admin = result.recordset[0];
+//       if (admin) {
+//         return res.status(409).json({ error: "Admin already exists" });
+//       } else {
+//         await pool
+//           .request()
+//           .input("email", sql.VarChar, email)
+//           .input("hashedPassword", sql.VarChar, hashedPassword)
+//           .query("INSERT INTO Admin (email, hashedPassword) VALUES (@email, @hashedPassword)");
+  
+//         res.status(200).json({ message: "Admin created successfully" });
+//       }
+//     } catch (error) {
+//       res.status(409).json(error.message);
+//     } finally {
+//       sql.close();
+//     }
+//   };
+  
 
 
 

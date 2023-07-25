@@ -4,3 +4,23 @@
     text-align: center;
     margin-top: 10px;
 }
+.adminPage{
+    height: 90vh;
+    background-color: rgb(60, 66, 66);
+}
+.myFormAdmin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:rgb(238, 184, 6);
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #090c27;
+    box-shadow: 0 0 10px rgba(128, 120, 120, 0.5);
+    width: 60%;
+    height: 200px;
+    border: 2px solid rgb(255, 0, 43);
+    margin: 120px auto;
+
+}

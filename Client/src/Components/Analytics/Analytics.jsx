@@ -1,6 +1,8 @@
 import React from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 import './Analytics.css';
+import { Doughnut } from "react-chartjs-2";
+import DoughnutChart from '../DoughnutChart';
 
 const Analytics = () => {
   const data = [
@@ -10,10 +12,13 @@ const Analytics = () => {
     // Add more data points here
   ];
 
+  
+
   return (
-    <div className="analytics-container">
-      <h3>Line Chart</h3>
-      <LineChart width={400} height={400} data={data}>
+    <div className="analytics-container1">
+    <div className="linechart">
+      <h3>User Analytics</h3>
+      <LineChart width={400} height={240} data={data}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="name" />
         <YAxis />
@@ -22,7 +27,16 @@ const Analytics = () => {
         <Line type="monotone" dataKey="uv" stroke="#8884d8" />
       </LineChart>
     </div>
+    <div>
+      <h3>Doughnut Chart </h3>
+      {/* <DoughnutChart /> */}
+    </div>
+   
+    </div>
   );
 };
 
+
+
 export default Analytics;
+

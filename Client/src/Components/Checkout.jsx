@@ -4,6 +4,7 @@ import axios from 'axios'
 function CheckOut({cartItems}) {
     const user = 1;
     const handleCheckout = ()=>{
+        console.log(cartItems)
         axios.post('http://localhost:8080/create-checkout-session', {
             userID: user,
             cartItems
@@ -11,9 +12,9 @@ function CheckOut({cartItems}) {
             if(res.data.url){
                 window.location.href = res.data.url
             }
-        }).catch((error=>{
+        }).catch((error)=>{
             console.log(error)
-        }))
+        })
     }
   return (
     <>

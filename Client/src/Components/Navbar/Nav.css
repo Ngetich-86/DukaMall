@@ -5,7 +5,7 @@
     gap: 3.9em;
     justify-content: center;
     align-items: center;
-    background-color:#e20f67 ;
+    background-color:#290564 ;
     /* background: linear-gradient(to right, #be0606, #e20f67); */
     display: flex;
     place-items: center;
@@ -17,9 +17,9 @@
 .logo{
     font-size: 14px;
     font-weight: 700;
-    color: rgb(79, 18, 192);
-    margin-left: 0px;
-    /* text-align: center; */
+    color: rgb(86, 219, 9);
+    margin-left: 10px;
+    text-align:left;
    
 }
 

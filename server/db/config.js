@@ -11,9 +11,9 @@ assert(HOST, 'HOST is required');
 const config = {
     port: PORT,
     host: HOST,
-    stripe: STRIPE_KEY,
+    // stripe: STRIPE_KEY,
     client: CLIENT_URL,
-    // url: HOST_URL, 
+    url: HOST_URL, 
     cookiePwd: COOKIE_ENCRYPT_PWD,
     sql: {
         server: SQL_SERVER,

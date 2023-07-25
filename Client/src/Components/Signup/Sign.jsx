@@ -47,7 +47,7 @@ function Register() {
     <div className="registrationPage">
       <h2 className="registrationTitle">Sign UP Now😲</h2>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="myFormLogin">
+      <form onSubmit={handleSubmit(onSubmit)} className="myFormLogin1">
         <>
         <input className="inputFieldLogin" type="text"placeholder="Your full name" {...register("fullName", { required: true })}/>
         {errors.fullName && <span>This field is required</span>}

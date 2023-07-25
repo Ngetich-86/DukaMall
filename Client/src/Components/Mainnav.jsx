@@ -5,6 +5,7 @@ import Product from './Product/Product'
 import Users from './Allusers/Users'
 import { useContext } from 'react'
 import { Context } from '../Context/applyContext/context' 
+import Orders from './Orders/Orders.jsx'
 const Mainnav = () => {
   const { ui} = useContext(Context);
   return (
@@ -15,7 +16,7 @@ const Mainnav = () => {
           <h2>Analytics</h2>
           <Analytics />
         </div>
-        ) : ui === 'product' ? (
+        ): ui === 'product' ? (
 
         <div className="product">
           {/* <h1>Add and delete products</h1> */}
@@ -27,7 +28,12 @@ const Mainnav = () => {
           <h3>Track shipping and payment</h3>
           <Users />
         </div>
-        ) : null
+        ): ui === 'orders' ? (
+          <div className="orders">
+            <h2>Orders</h2>
+            <Orders />
+          </div>
+          ) : null
         }
     </div>
   )

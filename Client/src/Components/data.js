@@ -1,13 +1,21 @@
-import image from '../assets/images/msbag.jpg'
+import image from '../assets/images/sneaker.jpg'
+// import image1 from '../assets/images/sneaker1.jpg'
+import image1 from '../assets/images/msbag.jpg'
+// import image2 from '../assets/images/sneaker.jpg'
+// import image3 from '../assets/images/sneaker.jpg'
+// import image4 from '../assets/images/sneaker.jpg'
+import image5 from '../assets/images/avatar.png'
+import image6 from '../assets/images/mswaterb.jpg'
+import image7 from '../assets/images/nikeAJ.webp'
 
 const data=
 
 [
     {
     id: 1,
-    title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+    title: "Fjallraven -Backpack",
     price: 109.95,
-    description: "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+    description: "Your perfect pack for everyday use and walks in the forest.",
     category: "men's clothing",
     image: image,
     rating: {
@@ -21,7 +29,7 @@ const data=
     price: 22.3,
     description: "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
     category: "men's clothing",
-    image: image,
+    image: image5,
     rating: {
     rate: 4.1,
     count: 259
@@ -45,7 +53,7 @@ const data=
     price: 15.99,
     description: "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
     category: "men's clothing",
-    image: image,
+    image: image6,
     rating: {
     rate: 2.1,
     count: 430
@@ -57,7 +65,7 @@ const data=
     price: 695,
     description: "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
     category: "jewelery",
-    image: image,
+    image: image7,
     rating: {
     rate: 4.6,
     count: 400
@@ -69,7 +77,7 @@ const data=
     price: 168,
     description: "Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.",
     category: "jewelery",
-    image: image,
+    image: image3,
     rating: {
     rate: 3.9,
     count: 70

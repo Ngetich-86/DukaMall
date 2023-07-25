@@ -1,19 +1,19 @@
-.loginPage {
+.loginPage2 {
     height: 90vh;
     /* background-color: aqua; */
     /* background-image: url(../../assets/images/lilartsy-3ENfnnjbdJs-unsplash.jpg); */
   }
-  .loginTitle {
+  .loginTitle2 {
     font-size: 2rem;
     font-weight: 700;
     text-align: center;
     margin-bottom: 2rem;
-    color:white;
+    color:rgb(185, 180, 180);
     margin-top: 0.1rem;
   }
  
   
-  .toLogIn {
+  .toLogIn2 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,27 +22,28 @@
     margin: 1rem;
   }
 
-  .myFormLogin {
+  .myFormLogin2 {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* margin: 0 auto; */
-    margin-left: 390px;
     color:rgb(238, 184, 6);
     padding: 20px;
     border-radius: 10px;
     background-color: #090c27;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    width: 100%;
+    box-shadow: 0 0 10px rgba(241, 236, 236, 0.5);
+    width: 50%;
+    height: 200px;
+    border: 2px solid rgb(87, 57, 63);
+    margin: 120px auto;
   }
   
-  .inputFieldLogin {
+  .inputFieldLogin2 {
     width: 60%;
-    height: 50px;
-    margin: 10px 0;
+    height: 40px;
+    /* margin: 10px 0; */
     padding: 0 10px;
-    border: 1px solid #f38405;
+    /* border: 1px solid #50f305; */
     border-radius: 5px;
     outline: none;
   }

@@ -14,8 +14,9 @@ export const loginRequired = (req, res, next) => {
 
 // register user
 export const registerUser = async (req, res) => {
-  const { userName, email, password, fullName, phoneNumber, postalCode, city } = req.body;
+  const { userName, email,password, fullName, phoneNumber, postalCode, city } = req.body;
   const hashedPassword = bcrypt.hashSync(password, 10);
+  // const hashedPassword = await bcrypt.hash(password, 10);
   console.log(userName, email, hashedPassword);
   try {
     // if user already exists
@@ -42,7 +43,7 @@ export const registerUser = async (req, res) => {
         .input("city", sql.VarChar, city)
         .input("hashedPassword", sql.VarChar, hashedPassword)
         .query(
-          "INSERT INTO users (fullName, userName, email, phoneNumber, postalCode, city, hashedPassword) VALUES (@fullName, @userName, @email, @phoneNumber, @postalCode, @city, @hashedPassword)"
+          "INSERT INTO Users (fullName, userName, email, phoneNumber, postalCode, city, hashedPassword) VALUES (@fullName, @userName, @email, @phoneNumber, @postalCode, @city, @hashedPassword)"
         );
       res.status(200).json({ message: "User created successfully" });
     }

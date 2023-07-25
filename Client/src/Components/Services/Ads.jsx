@@ -4,7 +4,7 @@ import Mainnav from '../Mainnav'
 const Ads = () => {
   return (
     <>
-    <div style={{height:"auto",display:"flex",background:'rgb(67, 7, 82)',color:'red'}}>
+    <div style={{height:"auto",display:"flex",background:'black',color:'red'}}>
     <Sidenav/>
     <Mainnav/>
     </div>
