@@ -17,13 +17,13 @@
   
  }
  .sidenav-wrapper:hover{
-     background-color:black;
-     color: #ca0949;
+     /* background-color:black; */
+     /* color: #ca0949; */
      cursor: pointer;
  }
  .sidenav-header-logo{
      width: 100%;
-     font-size: 1.5rem;
+     font-size: 1rem;
      font-weight: 700;
      color:white;
      height: 100%;

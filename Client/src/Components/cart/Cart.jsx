@@ -6,9 +6,12 @@ import "./Cart.css";
 import { IoMdTrash } from "react-icons/io";
 import EmpCart from "../emptyCart/EmpCart";
 import CheckOut from "../Checkout";
+import Mpesa from "../mpesa/Mpesa";
+
+
+// ... (imports and other code)
 
 const Cart = () => {
-  // const cart = useSelector((state)=>state.cart);
   const Globalstate = useContext(Cartcontext);
   const state = Globalstate.state;
   const dispatch = Globalstate.dispatch;
@@ -20,25 +23,25 @@ const Cart = () => {
   return (
     <div className="cart">
       {state.length > 0 ? (
-        state.map((item, index) => {
+        state.map((cartItem, index) => {
           return (
             <div className="card" key={index}>
-              <img src={item.image} alt="" />
-              <p>{item.title}</p>
-              <p>{item.quantity * item.price}</p>
+              <img src={cartItem.image} alt="" />
+              <p>{cartItem.title}</p>
+              <p>{cartItem.quantity * cartItem.price}</p>
               <div className="quantity">
                 <button
-                  onClick={() => dispatch({ type: "INCREASE", payload: item })}
+                  onClick={() => dispatch({ type: "INCREASE", payload: cartItem })}
                 >
                   +
                 </button>
-                <p>{item.quantity}</p>
+                <p>{cartItem.quantity}</p>
                 <button
                   onClick={() => {
-                    if (item.quantity > 1) {
-                      dispatch({ type: "DECREASE", payload: item });
+                    if (cartItem.quantity > 1) {
+                      dispatch({ type: "DECREASE", payload: cartItem });
                     } else {
-                      dispatch({ type: "REMOVE", payload: item });
+                      dispatch({ type: "REMOVE", payload: cartItem });
                     }
                   }}
                 >
@@ -46,7 +49,7 @@ const Cart = () => {
                 </button>
               </div>
               <IoMdTrash
-                onClick={() => dispatch({ type: "REMOVE", payload: item })}
+                onClick={() => dispatch({ type: "REMOVE", payload: cartItem })}
               />
             </div>
           );
@@ -57,18 +60,17 @@ const Cart = () => {
 
       {state.length > 0 && (
         <div className="total">
-      <Link to= '/'>
-       <a href="/"><button type="submit" className='btn-shop'>⬅️Continue Shopping</button></a>
+          <Link to= '/'>
+        <a href="/"><button type="submit" className='btn-shop'>⬅️Continue Shopping</button></a>
+                 </Link> 
+         <h2>{total}</h2>
+        <CheckOut cartItems={state}/>
+                 <h2>OR</h2>
+
+       <Link to= '/Mpesa'>
+       <a href="/Mpesa"><button type="submit" className='btn-mpesa'>pay with mpesa</button></a>
          </Link> 
-         <h2>${total}</h2>
-         <CheckOut cartItems={state}/>
-        
-     
-         
-          
-      </div>
-       
-        
+        </div>
       )}
     </div>
   );
@@ -76,17 +78,8 @@ const Cart = () => {
 
 export default Cart;
 
-
-
-
-
-// import { useContext } from "react";
-// import { Cartcontext } from "../../Context/Context";
-// import "./Cart.css";
-// import { IoMdTrash } from "react-icons/io";
-
-
 // const Cart = () => {
+//   // const cart = useSelector((state)=>state.cart);
 //   const Globalstate = useContext(Cartcontext);
 //   const state = Globalstate.state;
 //   const dispatch = Globalstate.dispatch;
@@ -94,49 +87,69 @@ export default Cart;
 //   const total = state.reduce((total, item) => {
 //     return total + item.price * item.quantity;
 //   }, 0);
+
 //   return (
 //     <div className="cart">
-//         {state.length > 0 ? (
-//       {state.map((item, index) => {
-//         return (
-//           <div className="card" key={index}>
-//             <img src={item.image} alt="" />
-//             <p>{item.title}</p>
-//             <p>{item.quantity * item.price}</p>
-//             <div className="quantity">
-//               <button
-//                 onClick={() => dispatch({ type: "INCREASE", payload: item })}>
-//                 +
-//               </button>
-//               <p>{item.quantity}</p>
-//               <button
-//                 onClick={() => {
-//                   if (item.quantity > 1) {
-//                     dispatch({ type: "DECREASE", payload: item });
-//                   } else {
-//                     dispatch({ type: "REMOVE", payload: item });
-//                   }
-//                 }}>
-//                 -
-//               </button>
+//       {state.cartItems.length > 0 ? (
+//         state.cartItems.map((cartItem, index) => {
+//           return (
+//             <div className="card" key={index}>
+//               <img src={cartItem.image} alt="" />
+//               <p>{cartItem.title}</p>
+//               <p>{cartItem.quantity * cartItem.price}</p>
+//               <div className="quantity">
+//                 <button
+//                   onClick={() => dispatch({ type: "INCREASE", payload: item })}
+//                 >
+//                   +
+//                 </button>
+//                 <p>{cartItem.quantity}</p>
+//                 <button
+//                   onClick={() => {
+//                     if (cartItem.quantity > 1) {
+//                       dispatch({ type: "DECREASE", payload: item });
+//                     } else {
+//                       dispatch({ type: "REMOVE", payload: item });
+//                     }
+//                   }}
+//                 >
+//                   -
+//                 </button>
+//               </div>
+//               <IoMdTrash
+//                 onClick={() => dispatch({ type: "REMOVE", payload: item })}
+//               />
 //             </div>
-//             <IoMdTrash onClick={() => dispatch({ type: "REMOVE", payload: item })} />
-
-//           </div>
-//         );
-//       })}
-//       {state.length > 0 && (
-//         <div className="total">
-//           <h2>${total}</h2>
-//           <button>CHECKOUT</button>
-//         </div>
+//           );
+//         })
+//       ) : (
+//         <EmpCart />
 //       )}
-//         ) : (
-//           <h1>Your cart is empty</h1>
+
+//       {state.cartItems.length > 0 && (
+//         <div className="total">
+//       <Link to= '/'>
+//        <a href="/"><button type="submit" className='btn-shop'>⬅️Continue Shopping</button></a>
+//          </Link> 
+//          <h2>{total}</h2>
+//          {/* <CheckOut cartItems={state}/> */}
+//          <h2>OR</h2>
+
+//          <Link to= '/Mpesa'>
+//        <a href="/Mpesa"><button type="submit" className='btn-mpesa'>pay with mpesa</button></a>
+//          </Link> 
         
-//         )
+     
+         
+          
+//       </div>
+       
+        
+//       )}
 //     </div>
 //   );
 // };
 
 // export default Cart;
+
+

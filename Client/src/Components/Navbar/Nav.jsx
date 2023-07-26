@@ -8,6 +8,7 @@ import {AiOutlineLogout} from 'react-icons/ai'
 import { Context } from '../../Context/useContent/Context';
 import { useContext } from 'react'
 const Nav = () => {
+  const {cartItems} = useContext(Context);
 
   const { user } = useContext(Context);
 
@@ -18,14 +19,25 @@ const Nav = () => {
           <h3>Duka_Mall🎉</h3>
         </div>
     <Link to="/" id="menu">Shop</Link>
+    {!user?(
     <Link to="/Signup" id="menu">Sign Up</Link>
-    <Link to="/Login" id="menu">Login</Link>
-    <Link to="/Cart" id="menu"><BsFillCartPlusFill/></Link>
-    <Link to="/User" id="menu"><AiOutlineUserSwitch/></Link>
-  
-    <Link to="/Admin" id="menu">Admin</Link>
+    ) : null}
     
+    <Link to="/Login" id="menu">Login</Link>
+   
+    <Link to="/Cart" id="menu"><BsFillCartPlusFill/>
+    {/* <span>3</span> */}
+    </Link>
+    {/* {!user?( */}
+      <>
+       <Link to="/User" id="menu"><AiOutlineUserSwitch/></Link>
+    <Link to="/Admin" id="menu">Admin</Link>
+      </>
+    {/* ) : null} */}
+    
+    {user && (
     <Link to="/Logout" id="menu"><AiOutlineLogout/></Link>
+    )}
     
     
     

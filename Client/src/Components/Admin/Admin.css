@@ -20,7 +20,7 @@
     box-shadow: 0 0 10px rgba(128, 120, 120, 0.5);
     width: 60%;
     height: 200px;
-    border: 2px solid rgb(255, 0, 43);
+    /* border: 2px solid rgb(255, 0, 43); */
     margin: 120px auto;
 
 }

@@ -8,6 +8,7 @@ import Footer from './Components/Footer/Footer'
 import User from './Components/User/User'
 import Admin from './Components/Admin/Admin'
 import Services from './Components/Services/Ads'
+import Mpesa from './Components/mpesa/Mpesa'
 import './App.css'
 import Logout from './Components/Logout/Logout'
 import { Context } from './Context/useContent/Context'
@@ -29,6 +30,8 @@ const App = () => {
       <Route path="/Admin" element={<Admin/>} />
       <Route path="/Ads" element={<Services/>} />
       <Route path="/Logout" element={<Logout/>} />
+      <Route path="/Mpesa" element={<Mpesa/>} />
+
       
     </Routes>
     <Footer/>

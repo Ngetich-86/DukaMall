@@ -247,7 +247,7 @@ export default function NewProduct() {
 
 return (
   <div className="newProduct">
-    <h4 className="addProductTitle">New Product</h4>
+    {/* <h4 className="addProductTitle">New Product</h4> */}
     <form onSubmit={handleSubmit(onSubmit)} className="addProductForm">
     <label>Image</label>
               <input
@@ -267,7 +267,7 @@ return (
         <input name="title" type="text" placeholder="ksh"{...register("price")} />
         <p className="error-message">{errors.title?.message}</p> 
         <label>category</label>
-        <input name="title" type="text" placeholder="cat"{...register("category")} />
+        <input name="title" type="text" placeholder="cat" {...register("category")} />
         <p className="error-message">{errors.title?.message}</p> 
       </div>
 

@@ -6,6 +6,7 @@
     justify-content: center;
     align-items: center;
     background-color:#290564 ;
+    position: sticky;
     /* background: linear-gradient(to right, #be0606, #e20f67); */
     display: flex;
     place-items: center;
@@ -17,7 +18,7 @@
 .logo{
     font-size: 14px;
     font-weight: 700;
-    color: rgb(86, 219, 9);
+    color: rgb(235, 25, 10);
     margin-left: 10px;
     text-align:left;
    

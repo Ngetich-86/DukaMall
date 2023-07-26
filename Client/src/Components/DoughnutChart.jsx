@@ -1,20 +1,29 @@
 import React from 'react';
-import { Doughnut } from 'react-chartjs-2';
+import { Line } from 'react-chartjs-2';
 
-const DoughnutChart = () => {
-  // Sample data for the doughnut chart
+const ChartComponent = () => {
   const data = {
-    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple'],
+    labels: ['January', 'February', 'March', 'April', 'May'],
     datasets: [
       {
+        label: 'Sample Data',
         data: [12, 19, 3, 5, 2],
-        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4CAF50', '#9C27B0'],
-        hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4CAF50', '#9C27B0'],
+        backgroundColor: 'rgba(75, 192, 192, 0.6)',
+        borderColor: 'rgba(75, 192, 192, 1)',
+        borderWidth: 1,
       },
     ],
   };
 
-  return <Doughnut data={data} />;
+  const options = {
+    scales: {
+      y: {
+        beginAtZero: true,
+      },
+    },
+  };
+
+  return <Line data={data} options={options} />;
 };
 
-export default DoughnutChart;
+export default ChartComponent;

@@ -32,7 +32,7 @@ const Login = () => {
       })
     .catch(({response}) => {
        console.log(response.data.error); });
-       alert('Login Failed'); 
+       alert(response.data.error); 
     }
 
   return (

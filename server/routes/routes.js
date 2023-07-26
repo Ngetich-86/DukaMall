@@ -6,7 +6,7 @@ import {
   import {adminLogin} from "../Controllers/adminController.js";
   import {registerAdmin} from "../Controllers/adminController.js"
   import { getData } from "../Controllers/userData.js";
-  // import {stripeCheckout, webhookHandler} from "../Controllers/stripeControler.js"
+  import {stripeCheckout} from "../Controllers/stripeControler.js"
   import {addProduct} from "../Controllers/productController.js"
   import {getProducts} from "../Controllers/productController.js"
   import {deleteProduct} from "../Controllers/productController.js"
@@ -28,7 +28,7 @@ import {
     app.route("/users").get(getData);
 
     //stripe route
-    // app.route('/create-checkout-session').post(stripeCheckout)
+    app.route('/stripe-session').post(stripeCheckout)
     // app.route('/webhook').post( express.raw({ type: 'application/json' }), webhookHandler)
 
     //add product

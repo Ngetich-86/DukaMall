@@ -11,8 +11,8 @@ const User = () => {
 
         <div className="user-info">
         <h2>My Profile</h2>
-        <h4>Email:del@gmail.com</h4>
-        <h4>Username:Del</h4>
+        <h4>Email:kamotho@gmail.com</h4>
+        <h4>Username:sam</h4>
         <h4>Phone Number: 0742252810</h4>
         <h4>Postal Code:20300</h4>
         <h4>City: Konza</h4>

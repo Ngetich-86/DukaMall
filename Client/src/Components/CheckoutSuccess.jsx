@@ -1,6 +1,14 @@
 function CheckoutSuccess() {
     return (
-      <h1>CheckoutSuccess</h1>
+      <div style={{height:"100vh",display:"flex",background:'black',color:'orange'}}>
+      🎆🎆🎉🎉🎉🎊🎉🎉🎆🎆🎆🎊🎊🎉✨✨
+        🎆🎆🎉🎉🎉CheckoutSuccess🎊🎉🎉🎆🎆🎆
+        🎊🎊🎉✨✨     🎆🎆    🎉🎉🎉🎊🎉🎉🎆🎆🎆
+        🎊🎊🎉✨✨🎆  🎉🎉  🎉 🎊🎉🎉🎆🎆🎆🎊
+        🎊🎉✨✨🎆🎆🎉🎉🎉🎊🎉🎉🎆🎆🎆🎊🎊🎉✨✨
+        🎉✨✨🎆🎆🎉🎉🎉🎊🎉🎉🎆🎆🎆🎊🎊🎉✨✨🎉
+    
+      </div>
     )
   }
   

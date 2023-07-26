@@ -1,6 +1,6 @@
 .cont1{
   /* border: 7px solid rgb(255, 8, 0); */
-  /* height: 190vh; */
+  height: 190vh;
 }
 table {
     
@@ -9,7 +9,7 @@ table {
     border-collapse: collapse;
     background-color: rgb(5, 5, 5);
     margin-left:-10px;
-    border-bottom: 90px;
+    border-bottom: 40px;
   }
   thead{
     /* background-color: #71c225; */

@@ -36,3 +36,6 @@
   border-top: 3px solid rgb(129, 6, 245);
   gap:2rem;
 }
+.btn-mpesa{
+  background-color: green;
+}

@@ -1,56 +1,47 @@
-// // import config from '../db/config';
-// import Stripe from 'stripe';
-// import sql from 'mssql'
-// import  express  from 'express';
+import Stripe from 'stripe';
+import config from '../db/config.js';
+// const stripe = Stripe(config.STRIPE_KEY)
+const stripe = Stripe('sk_test_51NVE3DSGnjGeA9olOdnQjE6PPnwvEauEE3ryEFSVi0MWBq3sYtL7gFyty7Q0JTATioi6N5wnMRken18pbDV3CSTW00WQBWjm99')
+const client = 'http://localhost:5173/'
+// const client = config.client_url
 
-// const stripe = Stripe('sk_test_51NVE3DSGnjGeA9olOdnQjE6PPnwvEauEE3ryEFSVi0MWBq3sYtL7gFyty7Q0JTATioi6N5wnMRken18pbDV3CSTW00WQBWjm99 ')
-// const client = 'http://localhost:5173/'
+export const stripeCheckout = async (req, res) => {
+    const cartItems = req.body.state.map((cartItem) => {
+        return {
+            price_data: {
+                currency: 'usd',
+                product_data: {
+                    name: cartItem.title,
+                    images: [cartItem.image], 
+                    description: cartItem.quantity,
+                    metadata: {
+                        id: cartItem.index
+                    }
+                },
+                unit_amount: cartItem.price * 100
+            },
+            quantity: cartItem.quantity
+        };
+    });
 
-// // webhookHandler
-// export const stripeCheckout = async (req, res) => {
-//   const customer = await stripe.customers.create({
-//     metadata: {
-//       userID : req.body.userID,
-//       cart: JSON.stringify(req.body.cartItems),
-//     }
-//   })
-//   const line_items = req.body.cartItems.map((item)=>{
-//     return{
-      
-//       price_data:{
-//         currency:'usd',
-//         product_data: {
-//           name: item.title,
-//           images: [item.image],
-//           description: item.description,
-//           metadata: {
-//             id: item.id
-//           }
-//         },
-//         unit_amount: item.price * 100
-//       },
-//       quantity: item.quantity
-//     }
-//   })
-  
-//     const session = await stripe.checkout.sessions.create({
-//       payment_method_types: ["card"],
-//     shipping_address_collection: {
-//       allowed_countries: ["US", "CA", "KE"],
-//     },
-//     phone_number_collection: {
-//       enabled: true,
-//     },
-//      customer: customer.id,
-//      line_items,
-//       mode: 'payment',
-//       success_url: `${client}CheckoutSuccess`,
-//       cancel_url: `${client}Cart`,
-//     });
-  
-// res.send({url: session.url});
 
-//   };
+    const session = await stripe.checkout.sessions.create({
+        payment_method_types: ["card"],
+        shipping_address_collection: {
+            allowed_countries: ["US", "CA", "KE"],
+        },
+        phone_number_collection: {
+            enabled: true,
+        },
+        line_items: cartItems, 
+        mode: 'payment',
+        success_url: `${client}CheckoutSuccess`,
+        cancel_url: `${client}/Cart`,
+    });
+
+
+    res.send({ url: session.url });
+};
 
 
   

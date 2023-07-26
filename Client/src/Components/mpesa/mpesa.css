@@ -1,0 +1,40 @@
+.payment{
+    background-color: rgb(46, 128, 73);
+    width: 100%;
+    height: 500px;
+    margin:0;
+    border: 3px solid green;
+}
+.mpesa-title{
+    text-align: center;
+}
+.mpesa-body{
+    background-color: rgb(16, 17, 16);
+    width: 280px;
+    height: 300px;
+    margin-left: 540px;
+    border-radius: 12px;
+
+    
+    
+}
+.btn-mpesa1{
+    margin-left: 100px;
+    background-color: green;
+  }
+label {
+    color: rgb(126, 0, 243);
+    font-weight: 600;
+    /* margin-bottom: 10px; */
+
+  }
+
+  .mpesa-body input {
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 190px;
+    margin-left: 50px;
+    height:10px;
+    background-color: antiquewhite;
+  }

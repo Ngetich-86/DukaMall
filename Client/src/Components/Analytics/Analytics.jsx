@@ -2,7 +2,8 @@ import React from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 import './Analytics.css';
 import { Doughnut } from "react-chartjs-2";
-import DoughnutChart from '../DoughnutChart';
+// import DoughnutChart from '../DoughnutChart';
+import ChartComponent from '../DoughnutChart';
 
 const Analytics = () => {
   const data = [
@@ -28,8 +29,8 @@ const Analytics = () => {
       </LineChart>
     </div>
     <div>
-      <h3>Doughnut Chart </h3>
-      {/* <DoughnutChart /> */}
+      {/* <h3>Doughnut Chart </h3> */}
+      {/* <ChartComponent /> */}
     </div>
    
     </div>

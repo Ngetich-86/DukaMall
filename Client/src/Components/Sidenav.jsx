@@ -33,16 +33,16 @@ export default function Sidenav (){
         <div className="sidenav-wrapper">
             <div className="sidenav-header">
             {/* Analytics */}
-                <div className="sidenav-header-logo"onClick={handleAnalytics}> <DiGoogleAnalytics /></div>
+                <div className="sidenav-header-logo"onClick={handleAnalytics}> <DiGoogleAnalytics />Analytics</div>
             </div>
         </div>
         <div className="sidenav-wrapper">
         {/* Products */}
-        <div className="sidenav-header-logo"onClick={handleProduct}> <MdProductionQuantityLimits /></div>
+        <div className="sidenav-header-logo"onClick={handleProduct}> <MdProductionQuantityLimits />Product</div>
         {/* Users */}
-        <div className="sidenav-header-logo"onClick={handleUsers}><FaUsers /></div>
+        <div className="sidenav-header-logo"onClick={handleUsers}><FaUsers />Users</div>
         {/* Orders */}
-        <div className="sidenav-header-logo"onClick={handleOrders}> <BsBorderStyle /></div>
+        <div className="sidenav-header-logo"onClick={handleOrders}> <BsBorderStyle />Orders</div>
         </div>
     </div>
   )
