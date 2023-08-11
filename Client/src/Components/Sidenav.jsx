@@ -40,7 +40,7 @@ export default function Sidenav (){
         {/* Products */}
         <div className="sidenav-header-logo"onClick={handleProduct}> <MdProductionQuantityLimits />Product</div>
         {/* Users */}
-        <div className="sidenav-header-logo"onClick={handleUsers}><FaUsers />Users</div>
+        <div className="sidenav-header-logo"onClick={handleUsers}><FaUsers />customers</div>
         {/* Orders */}
         <div className="sidenav-header-logo"onClick={handleOrders}> <BsBorderStyle />Orders</div>
         </div>

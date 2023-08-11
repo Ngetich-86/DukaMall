@@ -63,7 +63,7 @@ const Cart = () => {
           <Link to= '/'>
         <a href="/"><button type="submit" className='btn-shop'>⬅️Continue Shopping</button></a>
                  </Link> 
-         <h2>{total}</h2>
+         <h3>Total: {total}</h3>
         <CheckOut cartItems={state}/>
                  <h2>OR</h2>
 
