@@ -10,6 +10,7 @@ import {
   import {addProduct} from "../Controllers/productController.js"
   import {getProducts} from "../Controllers/productController.js"
   import {deleteProduct} from "../Controllers/productController.js"
+  import {mpesaToken} from "../Controllers/mpesaController.js"
   import express from 'express';
   
 
@@ -39,6 +40,9 @@ import {
 
     //delete product
     app.route('/deleteProduct').delete(deleteProduct)
+
+    //mpesa api route
+    app.route('/mpesa').post(mpesaToken)
    
   
   

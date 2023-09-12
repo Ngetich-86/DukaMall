@@ -18,10 +18,13 @@ const Nav = () => {
     <div className="logo">
           <h3>Duka_Mall🎉</h3>
         </div>
+        <input type="text" placeholder='Search for item' className="searchInput" />
     <Link to="/" id="menu">Shop</Link>
     {!user?(
     <Link to="/Signup" id="menu">Sign Up</Link>
     ) : null}
+
+
     
     <Link to="/Login" id="menu">Login</Link>
    
