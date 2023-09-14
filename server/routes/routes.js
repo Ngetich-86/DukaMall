@@ -11,6 +11,7 @@ import {
   import {getProducts} from "../Controllers/productController.js"
   import {deleteProduct} from "../Controllers/productController.js"
   import {mpesaToken} from "../Controllers/mpesaController.js"
+  import { stkPush } from "../Controllers/mpesaController.js";
   import express from 'express';
   
 
@@ -43,6 +44,8 @@ import {
 
     //mpesa api route
     app.route('/mpesa').post(mpesaToken)
+    //stk push
+    app.route('/stkpush').post(stkPush)
    
   
   
