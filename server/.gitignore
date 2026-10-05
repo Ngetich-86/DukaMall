@@ -1,0 +1,4 @@
+
+# Local secrets and logs
+.env
+*.log
